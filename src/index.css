@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+@theme {
+
+  --color-customPurple: #9F4CC1;
+
+  --font-display: "Oswald", "sans-serif";
+
+  --my-font: "Aldrich", sans-serif;
+
+  --default-font-family: "Aldrich", sans-serif;
+
+  --color-bg-blue: #0D172B;
+  --color-bg-blue-service: white;
+
+  --color-text-blue: white;
+  --color-text-blue-tecnos: white;
+
+  --color-text-blue-service: #0D172B;
+  --color-text-blue-service-p: #0D172B;
+
+  --color-card-blue: #0D172B;
+
+}
+
+@layer theme {
+  .dark {
+    --color-bg-blue: black;
+    --color-bg-blue-service: #1a1e27;
+    --color-text-blue: white;
+    --color-text-blue-service: white;
+    --color-text-blue-service-p: #d4d4d4;
+
+    --color-text-blue-tecnos: #1a1e27;
+    --color-card-blue: #000000;
+
+    --color-customPurple: #B26FCD;
+  }
+}
+
+@layer utilities {
+
+  .bg-stars {
+    background-image: url("assets/images/universe.jpg");
+    background-size: cover;
+    background-position: center;
+
+
+  }
+
+  .dark .bg-stars {
+    background-image: url("assets/images/universe.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    /* Nécessaire pour les pseudo-éléments */
+  }
+
+  .dark .bg-stars::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Couleur noire avec une opacité de 60% */
+    pointer-events: none;
+    /* Pour ne pas interférer avec l'interaction de l'utilisateur */
+  }
+
+  @media (max-width:450px) {
+    .bg-stars {
+      background-position-x: 1025px;
+    }
+  }
+
+
+  .button-pointer {
+    pointer-events: auto !important;
+  }
+}
+
+
+
+
+
+:root {
+  font-family: var(--my-font);
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
