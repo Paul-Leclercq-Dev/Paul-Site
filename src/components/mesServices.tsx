@@ -6,6 +6,17 @@ interface services {
   src: string;
 }
 
+import fullstack from "../assets/images/services/fullstack.jpg"
+import mobileapp from "../assets/images/services/mobileapp.jpg"
+import api from "../assets/images/services/api.png"
+import devops from "../assets/images/services/devops.png"
+import uiux from "../assets/images/services/uiux.jpg"
+import security from "../assets/images/services/security.png"
+import database from "../assets/images/services/database.png"
+import testing from "../assets/images/services/testing.png"
+
+
+
 export function MesServices() {
 
   function services(): services[] {
@@ -13,42 +24,42 @@ export function MesServices() {
       {
         quote: "Création de sites et applications web performants avec React, NestJS, et bases de données optimisées.",
         name: "Développement Web Full-Stack",
-        src: "src/assets/images/services/fullstack.jpg",
+        src: fullstack,
       },
       {
         quote: "Applications interactives et responsives, adaptées aux mobiles avec React et PWA.",
         name: "Développement d'Applications Web & Mobile",
-        src: "src/assets/images/services/mobileapp.jpg",
+        src: mobileapp,
       },
       {
         quote: "Conception d'API REST et GraphQL sécurisées et performantes avec NestJS, Prisma et Node.js.",
         name: "API & Backend",
-        src: "src/assets/images/services/api.png",
+        src: api,
       },
       {
         quote: "Mise en place d’infrastructures cloud (AWS, Scaleway), CI/CD et conteneurisation avec Docker.",
         name: "Architecture & DevOps",
-        src: "src/assets/images/services/devops.png",
+        src: devops,
       },
       {
         quote: "Développement d’interfaces modernes avec TailwindCSS, animations et optimisations UX.",
         name: "Intégration UI/UX",
-        src: "src/assets/images/services/uiux.jpg",
+        src: uiux,
       },
       {
         quote: "Protection des applications (authentification, sécurité des données) et optimisation des performances.",
         name: "Sécurité & Performance",
-        src: "src/assets/images/services/security.png",
+        src: security,
       },
       {
         quote: "Modélisation, gestion et optimisation de bases SQL (MySQL, PostgreSQL) et NoSQL (MongoDB, Redis).",
         name: "Base de Données & Stockage",
-        src: "src/assets/images/services/database.png",
+        src: database,
       },
       {
         quote: "Automatisation des workflows, tests unitaires et end-to-end avec Jest, Cypress et BullMQ.",
         name: "Automatisation & Tests",
-        src: "src/assets/images/services/testing.png",
+        src: testing,
       },
     ];
     const servicesES = [
