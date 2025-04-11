@@ -6,10 +6,12 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { useTranslation } from 'react-i18next'
 
+import loading from "./assets/images/loading.png"
+
 function SplashScreen() {
   return (
     <div className="flex items-center justify-center h-screen bg-[white]">
-      <img src="src/assets/images/loading.png" alt="Logo" className="w-1/4 animate-pulse rounded-3xl " />
+      <img src={loading} alt="Logo" className="w-1/4 animate-pulse rounded-3xl " />
     </div>
   )
 }
@@ -64,7 +66,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false)
-    }, 1000);
+    }, 1400);
 
     return () => clearTimeout(timer)
   }, [])
