@@ -8,7 +8,10 @@ services:
       - "8080:80" # Adapter si nécessaire
     networks:
       - app_network
-
+    volumes:
+      - ./build:/usr/share/nginx/html  # Monter le dossier build local vers Nginx
+    restart: unless-stopped  # Redémarrer le conteneur en cas de problème
+    
 networks:
   app_network:
     driver: bridge  # Utilisation du driver par défaut
