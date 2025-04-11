@@ -1,0 +1,14 @@
+services:
+  front:
+    build:
+      context: .
+      dockerfile: dockerfile
+    container_name: front
+    ports:
+      - "80:80" # Adapter si nécessaire
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge  # Utilisation du driver par défaut

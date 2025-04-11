@@ -34,8 +34,8 @@ export function SecondCard() {
                     />
                 </CardItem>
                 <div ref={accordionRef} className="flex justify-between items-center mt-10 text-black">
-                    <Accordion open={open}>
-                        <AccordionHeader onClick={handleOpen} className="cursor-pointer">
+                    <Accordion open={open} placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
+                        <AccordionHeader onClick={handleOpen} className="cursor-pointer" placeholder={undefined} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined}>
                             <CardItem translateZ={20} translateX={40} as="button" className="px-4 py-2 text-[#730363] backdrop-blur-sm border border-[#B26FCD] rounded-md hover:shadow-[0px_0px_4px_4px_rgba(0,0,0,0.1)] bg-white/[0.2] text-sm transition duration-200 cursor-pointer">
                                 {t("card2.bouton.enSavoirPlus")}
                             </CardItem>

@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { ColourfulText } from "./colourful-text";
 
 type Testimonial = {
+    
     quote: string;
     name: string;
     src: string;
 };
+
 export const AnimatedTestimonials = ({
     testimonials,
     autoplay = false,
@@ -137,7 +139,7 @@ export const AnimatedTestimonials = ({
                                 {testimonials[active].name}
                             </h3>
                             <p className="text-sm text-text-blue-service ">
-                                {testimonials[active].designation}
+                                {testimonials[active].name}
                             </p>
                             <motion.p className="mt-8 text-lg text-text-blue-service-p">
                                 {testimonials[active].quote.split(" ").map((word, index) => (
