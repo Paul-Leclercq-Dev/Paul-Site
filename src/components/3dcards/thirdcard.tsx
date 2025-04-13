@@ -1,5 +1,5 @@
 import { useState } from "react";
-import tuftissimo from "../../assets/images/tuftissimo.png";
+import tuftissimo from "../../assets/images/tuftissimo.webp";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import {
     Accordion,

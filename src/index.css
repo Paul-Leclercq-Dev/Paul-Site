@@ -45,7 +45,7 @@
 @layer utilities {
 
   .bg-stars {
-    background-image: url("assets/images/universe.jpg");
+    background-image: url("assets/images/universe.webp");
     background-size: cover;
     background-position: center;
 
@@ -53,9 +53,6 @@
   }
 
   .dark .bg-stars {
-    background-image: url("assets/images/universe.jpg");
-    background-size: cover;
-    background-position: center;
     position: relative;
     /* Nécessaire pour les pseudo-éléments */
   }

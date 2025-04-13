@@ -13,7 +13,6 @@ export function HeroHighlightDemo() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        console.log("Is visible:", entry.isIntersecting); // Debug
         if (entry.isIntersecting) {
           setIsVisibile(true);
         }

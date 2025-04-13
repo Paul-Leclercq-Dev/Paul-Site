@@ -1,5 +1,5 @@
 import { useState } from "react";
-import earthway1 from "../../assets/images/earthway1.png";
+import earthway1 from "../../assets/images/earthway1.webp";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import {
     Accordion,

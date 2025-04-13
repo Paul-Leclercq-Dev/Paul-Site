@@ -1,5 +1,5 @@
 import { useState } from "react";
-import sg from "../../assets/images/sg.png";
+import sg from "../../assets/images/sg.webp";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import {
     Accordion,

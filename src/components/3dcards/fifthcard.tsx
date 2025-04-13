@@ -1,5 +1,5 @@
 import { useState } from "react";
-import shaple_rockstar from "../../assets/images/shaple_rockstar.png";
+import shaple_rockstar from "../../assets/images/shaple_rockstar.webp";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import {
     Accordion,

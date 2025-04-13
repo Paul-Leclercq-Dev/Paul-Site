@@ -9,14 +9,20 @@ export default function useDarkMode(): [boolean, React.Dispatch<React.SetStateAc
   });
 
   useEffect(() => {
+    const htmlElement = document.documentElement;
+
     if (isDark) {
-      document.documentElement.classList.add("dark");
+      if (!htmlElement.classList.contains("dark")) {
+        htmlElement.classList.add("dark");
+      }
       localStorage.setItem("theme", "dark");
     } else {
-      document.documentElement.classList.remove("dark");
+      if (htmlElement.classList.contains("dark")) {
+        htmlElement.classList.remove("dark");
+      }
       localStorage.setItem("theme", "light");
     }
-  }, [isDark]); // Seul `isDark` dans les dépendances
+  }, [isDark]);
 
   return [isDark, setIsDark];
 }

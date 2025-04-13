@@ -1,30 +1,30 @@
 import { HeroHighlightDemo } from "../title-highlight";
 import { HoverEffect } from "./card-hover";
 
-import html from "../../assets/images/logo/html.png";
-import css from "../../assets/images/logo/css.png";
-import tailwind from "../../assets/images/logo/tailwind.png";
-import js from "../../assets/images/logo/js.webp";
-import react from "../../assets/images/logo/react.png";
-import vue from "../../assets/images/logo/vue.png";
-import ts from "../../assets/images/logo/ts.png";
-import cypress from "../../assets/images/logo/cypress.png";
+import html from "../../assets/images/logo/html.webp";
+import css from "../../assets/images/logo/css.webp";
+import tailwind from "../../assets/images/logo/tailwind.webp";
+import js from "../../assets/images/logo/jslogo.webp";
+import react from "../../assets/images/logo/react.webp";
+import vue from "../../assets/images/logo/vue.webp";
+import ts from "../../assets/images/logo/ts.webp";
+import cypress from "../../assets/images/logo/cypress.webp";
 
-import nest from "../../assets/images/logo/nest.png";
-import jest from "../../assets/images/logo/jest.png";
-import nodejs from "../../assets/images/logo/nodejs.png";
-import mongodb from "../../assets/images/logo/mongodb.png";
-import mysql from "../../assets/images/logo/mysql.png";
+import nest from "../../assets/images/logo/nest.webp";
+import jest from "../../assets/images/logo/jest.webp";
+import nodejs from "../../assets/images/logo/nodejs.webp";
+import mongodb from "../../assets/images/logo/mongodb.webp";
+import mysql from "../../assets/images/logo/mysql.webp";
 import prisma from "../../assets/images/logo/prisma.svg";
 import aws from "../../assets/images/logo/aws.webp";
-import scaleway from "../../assets/images/logo/scaleway.png";
-import redis from "../../assets/images/logo/redis.png";
+import scaleway from "../../assets/images/logo/scaleway.webp";
+import redis from "../../assets/images/logo/redis.webp";
 
-import gitci from "../../assets/images/logo/ci_cd.png";
-import docker from "../../assets/images/logo/docker.png";
-import prometheus from "../../assets/images/logo/prometheus.png";
-import grafana from "../../assets/images/logo/grafana.png";
-import nginx from "../../assets/images/logo/nginx.png";
+import gitci from "../../assets/images/logo/ci_cd.webp";
+import docker from "../../assets/images/logo/docker.webp";
+import prometheus from "../../assets/images/logo/prometheus.webp";
+import grafana from "../../assets/images/logo/grafana.webp";
+import nginx from "../../assets/images/logo/nginx.webp";
 
 export function CardHoverEffectDemo() {
   return (

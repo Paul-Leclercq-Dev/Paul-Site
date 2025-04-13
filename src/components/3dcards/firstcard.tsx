@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
-import lacasa1 from "../../assets/images/lacasa1.png";
+import lacasa1 from "../../assets/images/lacasa1.webp";
 import { CardBody, CardContainer, CardItem } from "./3d-card";
 import {
   Accordion,
