@@ -1,19 +1,19 @@
-import { Route, Routes } from 'react-router-dom'
-import './App.css'
-import HomePage from './pages/homePage'
-import "./i18n"
-import { useEffect, useState } from 'react'
-import { motion } from 'motion/react'
-import { useTranslation } from 'react-i18next'
+import { Route, Routes } from 'react-router-dom';
+import './App.css';
+import HomePage from './pages/homePage';
+import './i18n';
+import { useEffect, useState } from 'react';
+import { motion } from 'motion/react';
+import { useTranslation } from 'react-i18next';
 
-import loading from "./assets/images/loading.webp"
+import loading from './assets/images/loading.webp';
 
 function SplashScreen() {
   return (
     <div className="flex items-center justify-center h-screen bg-[white]">
-      <img src={loading} alt="Logo" className="w-1/2 md:1/4 animate-pulse rounded-3xl " />
+      <img src={loading} alt="Logo" className="w-1/2 md:w-1/4 animate-pulse rounded-3xl" />
     </div>
-  )
+  );
 }
 
 function ChooseLanguage({ changeLanguage }: { changeLanguage: (language: string) => void }) {
@@ -26,65 +26,69 @@ function ChooseLanguage({ changeLanguage }: { changeLanguage: (language: string)
         transition={{ duration: 1 }}
       >
         <button
-          onClick={() => changeLanguage("fr")}
+          onClick={() => changeLanguage('fr')}
           className="cursor-pointer px-12 py-8 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[8px_8px_0px_0px_#B26FCD] transition duration-200 min-w-28"
         >
           🇫🇷 Français
         </button>
         <button
-          onClick={() => changeLanguage("en")}
+          onClick={() => changeLanguage('en')}
           className="cursor-pointer px-12 py-8 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[8px_8px_0px_0px_#B26FCD] transition duration-200 min-w-28"
         >
           🇺🇸 English
         </button>
         <button
-          onClick={() => changeLanguage("esp")}
+          onClick={() => changeLanguage('esp')}
           className="cursor-pointer px-12 py-8 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[8px_8px_0px_0px_#B26FCD] transition duration-200 min-w-28"
         >
           🇪🇸 Español
         </button>
       </motion.div>
     </div>
-  )
+  );
 }
 
 function App() {
-  const [languageChoose, setLanguageChoose] = useState(
-    localStorage.getItem("language") ? true : false
-  )
-
   const { i18n } = useTranslation();
+  const [languageChoose, setLanguageChoose] = useState(!!localStorage.getItem('language'));
+  const [loading, setLoading] = useState(true);
+
+  // Charger la langue dès le départ
+  useEffect(() => {
+    const language = localStorage.getItem('language');
+    if (language) {
+      i18n.changeLanguage(language).then(() => setLanguageChoose(true));
+    }
+
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 1000); // Réduction du temps de chargement
+
+    return () => clearTimeout(timer);
+  }, []);
 
   const changeLanguage = (language: string) => {
-    i18n.changeLanguage(language);
-    localStorage.setItem("language", language)
-    setLanguageChoose(true)
+    i18n.changeLanguage(language).then(() => {
+      localStorage.setItem('language', language);
+      setLanguageChoose(true);
+    });
   };
 
-  const [loading, setLoading] = useState(true)
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false)
-    }, 1400);
-
-    return () => clearTimeout(timer)
-  }, [])
-
   if (loading) {
-    return <SplashScreen />
+    return <SplashScreen />;
   }
 
   return (
     <>
-      {languageChoose ?
+      {languageChoose ? (
         <Routes>
           <Route path="/" element={<HomePage />} />
         </Routes>
-        :
-        <ChooseLanguage changeLanguage={changeLanguage} />}
+      ) : (
+        <ChooseLanguage changeLanguage={changeLanguage} />
+      )}
     </>
-  )
+  );
 }
 
 export default App;

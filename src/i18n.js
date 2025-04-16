@@ -6,7 +6,7 @@ import translationFR from './locales/fr/translation.json';
 import translationES from './locales/esp/translation.json';
 
 const language = () => {
-  return localStorage.getItem('language')
+  return localStorage.getItem('language') || 'fr'
 }
 
 i18n
@@ -18,7 +18,7 @@ i18n
       esp: { translation: translationES },
     },
     lng: language(), // Langue par défaut
-    fallbackLng: 'en', // Langue de secours
+    fallbackLng: 'fr', // Langue de secours
     interpolation: {
       escapeValue: false, // React échappe automatiquement les valeurs
     },

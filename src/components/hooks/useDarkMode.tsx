@@ -1,28 +1,24 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 
 export default function useDarkMode(): [boolean, React.Dispatch<React.SetStateAction<boolean>>] {
   const [isDark, setIsDark] = useState(() => {
     return (
-      localStorage.getItem("theme") === "dark" ||
-      (!localStorage.getItem("theme") && window.matchMedia("(prefers-color-scheme: dark)").matches)
+      localStorage.getItem("theme") === "dark"
     );
   });
 
-  useEffect(() => {
-    const htmlElement = document.documentElement;
-
-    if (isDark) {
-      if (!htmlElement.classList.contains("dark")) {
-        htmlElement.classList.add("dark");
-      }
-      localStorage.setItem("theme", "dark");
-    } else {
-      if (htmlElement.classList.contains("dark")) {
-        htmlElement.classList.remove("dark");
-      }
-      localStorage.setItem("theme", "light");
-    }
+  useLayoutEffect(() => {
+    document.documentElement.classList.toggle("dark", isDark);
+    localStorage.setItem("theme", isDark ? "dark" : "light");
   }, [isDark]);
+
+   // Vérifier le système de préférences après le premier rendu
+   useEffect(() => {
+    if (!localStorage.getItem("theme")) {
+      const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+      setIsDark(prefersDark);
+    }
+  }, []);
 
   return [isDark, setIsDark];
 }
