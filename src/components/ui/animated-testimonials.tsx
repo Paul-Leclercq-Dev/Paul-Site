@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { ColourfulText } from "./colourful-text";
 
 type Testimonial = {
-    
+
     quote: string;
     name: string;
     src: string;
@@ -138,9 +138,6 @@ export const AnimatedTestimonials = ({
                             <h3 className="text-2xl font-bold text-text-blue-service ">
                                 {testimonials[active].name}
                             </h3>
-                            <p className="text-sm text-text-blue-service ">
-                                {testimonials[active].name}
-                            </p>
                             <motion.p className="mt-8 text-lg text-text-blue-service-p">
                                 {testimonials[active].quote.split(" ").map((word, index) => (
                                     <motion.span
@@ -170,13 +167,13 @@ export const AnimatedTestimonials = ({
                         <div className="flex gap-4 pt-12 md:pt-0">
                             <button
                                 onClick={handlePrev}
-                                className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+                                className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
                             >
                                 <IconArrowLeft className="h-5 w-5 text-black hover:text-[#9E4CC1] transition-transform duration-300 group-hover/button:rotate-12 cursor-pointer" />
                             </button>
                             <button
                                 onClick={handleNext}
-                                className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100 dark:bg-neutral-800"
+                                className="group/button flex h-7 w-7 items-center justify-center rounded-full bg-gray-100"
                             >
                                 <IconArrowRight className="h-5 w-5 text-black hover:text-[#9E4CC1] transition-transform duration-300 group-hover/button:-rotate-12 cursor-pointer" />
                             </button>

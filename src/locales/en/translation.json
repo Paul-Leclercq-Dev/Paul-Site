@@ -1,166 +1,167 @@
 {
     "nav": {
-        "accueil": "Home",
-        "qui_suis_je": "About Me",
-        "services": "Services",
-        "projets": "Projects",
-        "tecnos": "Technos",
-        "mecontacter": "Contact me"
+      "accueil": "Home",
+      "qui_suis_je": "About me",
+      "services": "Services",
+      "projets": "Projects",
+      "tecnos": "Technologies",
+      "mecontacter": "Contact me"
     },
     "accueil": {
-        "jesuis": "I am",
-        "paulleclercq": "Paul Leclercq",
-        "developpeur": "Developer "
+      "jesuis": "I am",
+      "paulleclercq": "Paul Leclercq",
+      "developpeur": "Developer"
     },
     "presentation": {
-        "quisuisje": "Who am I?",
-        "par1": "I am a passionate developer with over 4 years of experience. I started in web development with HTML, CSS, and JavaScript. Very quickly, I was drawn to the endless possibilities of development, especially the satisfaction of seeing the immediate results of my work. This instant feedback is what drives me to keep pushing my limits.",
-        "par2": "My journey has given me solid expertise in modern technologies such as React, NestJS, Prisma, AWS, Scaleway, and SQL. Working in large companies in France, I developed a sense of discipline and a structured approach suited to complex projects. Today, I’ve chosen to work as a freelancer because it allows me to lead projects from A to Z independently, put in as many hours as needed, and tackle technical challenges that match my ambitions.",
-        "par3": "Today, I’ve chosen to work as a freelancer because it allows me to lead projects from A to Z independently, put in as many hours as needed, and tackle technical challenges that match my ambitions.",
-        "par4": "What I love most is helping people express themselves through applications, by turning their ideas into concrete and functional solutions. For me, each project is a chance to be creative and solve problems in innovative ways. My goal is always to deliver robust, well-thought-out products while ensuring the best possible user experience.",
-        "btn": "Contact me"
+      "quisuisje": "Who am I?",
+      "par1": "I am a passionate developer with over 4 years of experience, having started in web development with HTML, CSS, and JavaScript. I was quickly drawn to the endless possibilities of development, especially the satisfaction of seeing tangible results from my work. This immediate feedback constantly pushes me to improve.",
+      "par2": "My background has given me solid expertise in modern technologies such as React, NestJS, Prisma, AWS, Scaleway, and SQL. Working in large organizations in France has helped me develop a rigorous and structured approach to handling complex projects.",
+      "par3": "Today, I’ve chosen to work as a freelancer because it allows me to manage projects from A to Z independently and take on technical challenges that match my ambitions.",
+      "par4": "What I love most is helping people express themselves by turning their ideas into concrete and functional solutions. For me, every project is an opportunity to be creative and solve problems in innovative ways. My goal is always to deliver robust and well-thought-out products while ensuring an optimal user experience.",
+      "btn": "Contact me"
     },
     "settings": {
-        "theme": "Change theme:",
-        "langue": "Languages:",
-        "contact": "Contact me"
+      "theme": "Change theme:",
+      "langue": "Languages:",
+      "contact": " Contact me"
     },
     "projets": "My Projects",
     "card1": {
-        "titre": "La Casa Altea",
-        "sousTitre": "Comprehensive digital management platform for an independent restaurant.",
-        "description": {
-            "intro": "La Casa Altea is a full-stack platform developed with React, NestJS, Prisma, SQL, and TypeScript. It provides the restaurant with secure, autonomous, and efficient management of its operations.",
-            "fonctionnalitesTitre": "Main features:",
-            "fonctionnalites": {
-                "f1": "Online reservations with real-time tracking.",
-                "f2": "Advanced security: Token Guard, CORS, protection against cyberattacks.",
-                "f3": "Admin dashboard to manage menus, availability, and orders.",
-                "f4": "Automated email sending: confirmations, reminders, notifications.",
-                "f5": "SEO & Performance optimization for better visibility.",
-                "f6": "Statistics & Analytics to monitor performance.",
-                "f7": "Multi-user system with role management."
-            },
-            "atoutsTitre": "Why is it a strong asset for the restaurant?",
-            "atouts": {
-                "a1": "Total autonomy: no need for intermediaries.",
-                "a2": "Cost savings: reduced commissions from third-party platforms.",
-                "a3": "Better control: real-time access to strategic data.",
-                "a4": "Customer and sensitive data protection."
-            },
-            "conclusion": "Thanks to this platform, La Casa Altea now has a powerful tool to run its business with peace of mind, deliver an optimal customer experience, and maximize profitability."
+      "titre": "La Casa Altea",
+      "sousTitre": "Complete digital management platform for an independent restaurant.",
+      "description": {
+        "intro": "La Casa Altea is a restaurant with a full-stack platform built using React, NestJS, Prisma, SQL, and TypeScript. It provides autonomous, secure, and high-performance management of its operations.",
+        "fonctionnalitesTitre": "Key Features:",
+        "fonctionnalites": {
+          "f1": "Online reservations with real-time tracking.",
+          "f2": "Advanced security: Token Guard, CORS, protection against cyberattacks.",
+          "f3": "Admin dashboard to manage menus, availability, and orders.",
+          "f4": "Automated emails: confirmation, reminders, notifications.",
+          "f5": "SEO & performance optimization for better visibility.",
+          "f6": "Statistics & analytics for performance tracking.",
+          "f7": "Multi-user support with role management."
         },
-        "bouton": {
-            "enSavoirPlus": "Learn more",
-            "visiter": "Visit the site"
-        }
+        "atoutsTitre": "Why it's a benefit for the restaurant:",
+        "atouts": {
+          "a1": "Total autonomy: no more intermediaries.",
+          "a2": "Cost savings: reduced third-party platform commissions.",
+          "a3": "Better control: access to strategic data in real-time.",
+          "a4": "Customer and sensitive data protection."
+        },
+        "conclusion": "Thanks to this platform, La Casa Altea now has a powerful tool to manage its business with confidence, offer an optimal customer experience, and maximize profitability."
+      },
+      "bouton": {
+        "enSavoirPlus": "Learn more",
+        "visiter": "Visit the site"
+      }
     },
     "card2": {
-        "titre": "Earthway",
-        "sousTitre": "Interactive platform for ecological awareness and sustainable engagement.",
-        "description": {
-            "intro": "Earthway is a web application currently in development, designed as a platform to raise awareness about protecting the planet. Created at the request of an environmentally committed client, it revolves around four pillars: reforestation, coral preservation, pollinator protection, and the promotion of eco-friendly innovations.",
-            "fonctionnalitesTitre": "Main features:",
-            "fonctionnalites": {
-                "f1": "Subscription system with several engagement levels to support concrete environmental actions.",
-                "f2": "Thematic news feed: dedicated to reforestation, oceans, pollinators, and green innovations.",
-                "f3": "Ethical marketplace: sustainable products with affiliate links to eco-conscious partners.",
-                "f4": "Community chat (coming in V2): a space for exchange between engaged members."
-            },
-            "objectifsTitre": "Platform goals:",
-            "objectifs": {
-                "o1": "Educate on current environmental issues.",
-                "o2": "Involve users in concrete actions at their level.",
-                "o3": "Facilitate access to eco-friendly alternatives with a curated selection of products and services.",
-                "o4": "Build loyalty among a community with shared values and progressive commitment."
-            },
-            "conclusion": "Currently in the design phase, the interface is being prototyped in Adobe XD. This freelance full-stack project has an ambitious vision: to offer citizens a concrete space to take action for the planet."
+      "titre": "Earthway",
+      "sousTitre": "Interactive platform for ecological awareness and sustainable engagement.",
+      "description": {
+        "intro": "Earthway is a web application under development, designed to raise awareness about protecting the planet. Created at the request of a committed client, it is built around four pillars: reforestation, coral reef protection, pollinator preservation, and promotion of eco-friendly innovations.",
+        "fonctionnalitesTitre": "Key Features:",
+        "fonctionnalites": {
+          "f1": "Subscription system with multiple levels of engagement to support real-world environmental actions.",
+          "f2": "Themed newsfeed: updates on reforestation, oceans, pollinators, and green innovations.",
+          "f3": "Ethical marketplace: responsible products with affiliate links to sustainable partners.",
+          "f4": "Community chat (coming in V2): a space for engaged users to connect."
         },
-        "bouton": {
-            "enSavoirPlus": "Learn more",
-            "visiter": "View prototype"
-        }
+        "objectifsTitre": "Platform Goals:",
+        "objectifs": {
+          "o1": "Educate about current environmental issues.",
+          "o2": "Involve users in concrete actions at their level.",
+          "o3": "Facilitate access to eco-friendly alternatives through a carefully curated selection of products and services.",
+          "o4": "Build a loyal community around shared values and progressive commitment."
+        },
+        "conclusion": "Currently in the design phase, the interface is being prototyped on Adobe XD. This application is a freelance full-stack project with an ambitious vision: to offer citizens a concrete space to take action for the planet."
+      },
+      "bouton": {
+        "enSavoirPlus": "Learn more",
+        "visiter": "View the prototype"
+      }
     },
     "card3": {
-        "titre": "Tuftissimo",
-        "sousTitre": "Interactive portfolio site for an artist specialized in tufting.",
-        "description": {
-            "intro": "Tuftissimo is a responsive portfolio site designed for a freelance artist specializing in tufting. Built with React, Tailwind CSS, and TypeScript, it showcases her textile creations and facilitates client contact.",
-            "fonctionnalitesTitre": "Main features:",
-            "fonctionnalites": {
-                "f1": "Dynamic gallery of her rugs, mirrors, and tufted wall art.",
-                "f2": "Direct link to Instagram to view the latest creations and place orders.",
-                "f3": "Integrated messaging system for personalized requests.",
-                "f4": "Polished front-end with subtle animations and textile texture highlights.",
-                "f5": "Responsive design: smooth navigation on both mobile and desktop.",
-                "f6": "Styled contact form with validation and user feedback."
-            },
-            "atoutsTitre": "Why is it a strong asset for Tuftissimo?",
-            "atouts": {
-                "a1": "Strong identity: showcases her unique artistic universe.",
-                "a2": "Increased visibility: improved natural SEO with a dedicated site.",
-                "a3": "Accessibility: her work is available online anytime.",
-                "a4": "Direct connection: simplifies communication with clients."
-            },
-            "conclusion": "Tuftissimo allows the artist to present her work professionally while maintaining a human and creative connection with her clients. 🌟"
+      "titre": "Tuftissimo",
+      "sousTitre": "Interactive showcase site for an artist specialized in tufting.",
+      "description": {
+        "intro": "Tuftissimo is a responsive showcase app designed for a freelance artist specializing in tufting. Developed with React, Tailwind CSS, and TypeScript, it highlights her textile creations while facilitating client contact.",
+        "fonctionnalitesTitre": "Key Features:",
+        "fonctionnalites": {
+          "f1": "Dynamic gallery of tufted rugs, mirrors, and wall decor.",
+          "f2": "Direct Instagram link to discover her latest work and place orders.",
+          "f3": "Built-in messaging system for personalized requests.",
+          "f4": "Polished front-end with subtle animations and enhanced textile textures.",
+          "f5": "Responsive design: smooth navigation on both mobile and desktop.",
+          "f6": "Stylized contact form with validation and user feedback."
         },
-        "bouton": {
-            "enSavoirPlus": "Learn more",
-            "visiter": "Visit the site"
+        "atoutsTitre": "Why it's a benefit for Tuftissimo:",
+        "atouts": {
+          "a1": "Strong identity: showcases her unique artistic universe.",
+          "a2": "Increased visibility: improved SEO via a dedicated site.",
+          "a3": "Accessibility: her work is available online anytime.",
+          "a4": "Direct relationship: simplifies exchanges with her clients."
         },
-        "comingSoon": "Site coming soon"
+        "conclusion": "Tuftissimo allows the artist to present her work professionally while maintaining a human and creative connection with her clients. 🌟"
+      },
+      "bouton": {
+        "enSavoirPlus": "Learn more",
+        "visiter": "Visit the site"
+      },
+      "comingSoon": "Site coming soon"
     },
     "card4": {
-        "titre": "Société Générale",
-        "sousTitre": "Redesign of a banking portal in the context of a merger.",
-        "description": {
-            "intro": "As a full-stack developer at Société Générale, I took part in several internal projects, playing a key role in redesigning a customer portal during the merger with Crédit du Nord.",
-            "responsabilitesTitre": "Main responsibilities:",
-            "responsabilites": {
-                "r1": "Front-end rebuild of the merged SG x Crédit du Nord site.",
-                "r2": "Integration of video APIs for remote customer relations.",
-                "r3": "Automated testing (unit, integration) with coverage tracking.",
-                "r4": "Analytics tracking for monitoring user journeys.",
-                "r5": "Performance testing to ensure smooth navigation.",
-                "r6": "Accessibility improvements to meet RGAA standards.",
-                "r7": "Application maintenance and daily technical support."
-            },
-            "conclusion": "This position allowed me to work in an agile team, within a demanding banking environment, complying with high quality and security standards, while contributing to high-visibility solutions. 🏦"
+      "titre": "Société Générale",
+      "sousTitre": "Redesign of a banking portal during a merger.",
+      "description": {
+        "intro": "As a full-stack developer at Société Générale, I participated in several internal projects, playing a key role in the redesign of a client portal during the merger with Crédit du Nord.",
+        "responsabilitesTitre": "Key Responsibilities:",
+        "responsabilites": {
+          "r1": "Front-end reconstruction of the merged SG x Crédit du Nord site.",
+          "r2": "Integration of video APIs for remote customer service.",
+          "r3": "Automated testing (unit, integration) with coverage monitoring.",
+          "r4": "Analytics tracking to follow user journeys.",
+          "r5": "Performance testing to ensure smooth navigation.",
+          "r6": "Accessibility improvements to comply with RGAA standards.",
+          "r7": "Application maintenance and daily technical support."
         },
-        "bouton": {
-            "enSavoirPlus": "Learn more",
-            "visiter": "Visit the site"
-        }
+        "conclusion": "This position allowed me to work in an agile team, in a demanding banking environment, meeting high standards of quality and security, while contributing to large-scale solutions. 🏦"
+      },
+      "bouton": {
+        "enSavoirPlus": "Learn more",
+        "visiter": "Visit the site"
+      }
     },
     "card5": {
-        "titre": "Shaple (Rockstar)",
-        "sousTitre": "Advanced Chrome extension to enhance Okta via REST API.",
-        "description": {
-            "intro": "As a full-stack developer, I contributed to the development of Rockstar, a Chrome extension that enhances the Okta user experience with advanced features such as user CSV export and other useful tools for administrators.",
-            "fonctionnalitesTitre": "Main features of Rockstar:",
-            "fonctionnalites": {
-                "f1": "Real-time feature additions on the Okta interface.",
-                "f2": "CSV export of users, groups, and custom settings.",
-                "f3": "Automated and secure Okta REST API requests.",
-                "f4": "Full-stack development with business logic in both the extension and Node backend."
-            },
-            "missionsTitre": "My daily tasks:",
-            "missions": {
-                "m1": "Developing new features based on user feedback.",
-                "m2": "Bug fixing and managing technical tickets.",
-                "m3": "Writing unit tests and automated test scenarios.",
-                "m4": "Advanced Git usage for versioning and code reviews.",
-                "m5": "Constant communication with product teams (lots of Huddles)."
-            },
-            "conclusion": "This experience allowed me to master the full software development lifecycle, with strong exposure to REST APIs, collaborative work, and automating repetitive tasks. 💼"
+      "titre": "Shaple (Rockstar)",
+      "sousTitre": "Advanced Chrome extension to enhance Okta via REST API.",
+      "description": {
+        "intro": "As a full-stack developer, I contributed to the development of Rockstar, a Chrome extension that enhances the Okta user experience with advanced features like user CSV export and many other useful tools for administrators.",
+        "fonctionnalitesTitre": "Key Features of Rockstar:",
+        "fonctionnalites": {
+          "f1": "Real-time feature enhancements on the Okta interface.",
+          "f2": "CSV export of users, groups, and custom settings.",
+          "f3": "Automated and secure Okta REST API requests.",
+          "f4": "Full-stack development with business logic in the extension and back-end Node."
         },
-        "bouton": {
-            "enSavoirPlus": "Learn more",
-            "visiter": "Visit the extension"
-        }
+        "missionsTitre": "My Daily Tasks:",
+        "missions": {
+          "m1": "Developing new features based on user feedback.",
+          "m2": "Bug fixing and handling technical tickets.",
+          "m3": "Writing unit tests and automated testing scenarios.",
+          "m4": "Advanced use of Git for versioning and code reviews.",
+          "m5": "Constant communication with product teams."
+        },
+        "conclusion": "This experience allowed me to master the full software development cycle, with strong exposure to REST APIs, collaborative work, and automation of repetitive tasks. 💼"
+      },
+      "bouton": {
+        "enSavoirPlus": "Learn more",
+        "visiter": "Visit the extension"
+      }
     },
     "technos": {
-        "mes": "My",
-        "technos": "technologies"
+      "mes": "My",
+      "technos": "technologies"
     }
-}
+  }
+  

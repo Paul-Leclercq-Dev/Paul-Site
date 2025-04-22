@@ -4,7 +4,7 @@
         "qui_suis_je": "Qui suis-je",
         "services": "Services",
         "projets": "Projets",
-        "tecnos": "Tecnos",
+        "tecnos": "Technos",
         "mecontacter": "Me contacter"
     },
     "accueil": {
@@ -14,10 +14,10 @@
     },
     "presentation": {
         "quisuisje": "Qui suis-je ?",
-        "par1": "Je suis un développeur passionné avec plus de 4 ans d’expérience, ayant démarré dans le développement web par l’intégration avec HTML, CSS et JavaScript. Très vite, j'ai été attiré par les possibilités infinies du développement, et surtout par la satisfaction de voir concrètement les résultats de mon travail. Ce retour immédiat est ce qui me pousse à toujours repousser mes limites.",
-        "par2": "Mon parcours m'a permis d'acquérir une expertise solide dans les technologies modernes telles que React, NestJS, Prisma, AWS, Scaleway et SQL. En travaillant dans de grandes structures en France, j'ai pu développer une rigueur et une méthodologie de travail adaptées aux projets complexes. Aujourd’hui, j’ai choisi de travailler en freelance, car cela me permet de mener des projets de A à Z en toute autonomie, sans compter mes heures de travail, et de relever des défis techniques à la hauteur de mes ambitions.",
-        "par3": "Aujourd’hui, j’ai choisi de travailler en freelance, car cela me permet de mener des projets de A à Z en toute autonomie, sans compter mes heures de travail, et de relever des défis techniques à la hauteur de mes ambitions.",
-        "par4": "Ce que j’aime par-dessus tout, c’est d’aider les personnes à s’exprimer à travers des applications, en transformant leurs idées en solutions concrètes et fonctionnelles. Pour moi, chaque projet est une occasion de faire preuve de créat ivité et de résoudre des problèmes de manière innovante. Mon objectif est toujours de livrer des produits robustes et bien pensés, tout en assurant une expérience utilisateur optimale.",
+        "par1": "Je suis un développeur passionné avec plus de 4 ans d’expérience, ayant démarré dans le développement web par l’intégration avec HTML, CSS et JavaScript. Très vite, j'ai été attiré par les possibilités infinies du développement, et surtout par la satisfaction de voir concrètement les résultats de mon travail. Ce retour immédiat est ce qui m'incite à toujours repousser mes limites.",
+        "par2": "Mon parcours m'a permis d'acquérir une expertise solide dans les technologies modernes telles que React, NestJS, Prisma, AWS, Scaleway et SQL. En travaillant dans de grandes structures en France, j'ai pu développer une rigueur et une méthodologie de travail adaptées aux projets complexes.",
+        "par3": "Aujourd’hui, j’ai choisi de travailler en freelance, car cela me permet de mener des projets de A à Z en toute autonomie et de relever des défis techniques à la hauteur de mes ambitions.",
+        "par4": "Ce que j’aime par-dessus tout, c’est aider les personnes à s’exprimer en transformant leurs idées en solutions concrètes et fonctionnelles. Pour moi, chaque projet est une occasion de faire preuve de créativité et de résoudre des problèmes de manière innovante. Mon objectif est toujours de livrer des produits robustes et bien pensés, tout en assurant une expérience utilisateur optimale.",
         "btn": "Me contacter"
     },
     "settings": {
@@ -30,7 +30,7 @@
         "titre": "La Casa Altea",
         "sousTitre": "Plateforme complète de gestion digitale pour restaurant indépendant.",
         "description": {
-            "intro": "La Casa Altea est une plateforme full-stack développée avec React, NestJS, Prisma, SQL et TypeScript. Elle offre au restaurant une gestion autonome, sécurisée et performante de son activité.",
+            "intro": "La Casa Altea est un restaurant possédant une plateforme full-stack développée avec React, NestJS, Prisma, SQL et TypeScript. Elle lui offre une gestion autonome, sécurisée et performante de son activité.",
             "fonctionnalitesTitre": "Fonctionnalités principales :",
             "fonctionnalites": {
                 "f1": "Réservations en ligne avec suivi en temps réel.",
@@ -59,7 +59,7 @@
         "titre": "Earthway",
         "sousTitre": "Plateforme interactive de sensibilisation écologique et d'engagement durable.",
         "description": {
-            "intro": "Earthway est une application web en cours de développement, pensée comme une plateforme de sensibilisation à la protection de la planète. Créée sur demande d’un client engagé, elle s’articule autour de quatre piliers : la reforestation, la sauvegarde des coraux, la protection des pollinisateurs et la promotion d’innovations éco-responsables.",
+            "intro": "Earthway est une application web en cours de développement, pensée pour sensibiliser à la protection de la planète. Créée sur demande d’un client engagé, elle s’articule autour de quatre piliers : la reforestation, la sauvegarde des coraux, la protection des pollinisateurs et la promotion d’innovations éco-responsables.",
             "fonctionnalitesTitre": "Fonctionnalités principales :",
             "fonctionnalites": {
                 "f1": "Système d’abonnement avec plusieurs niveaux d’engagement pour soutenir des actions concrètes en faveur de la planète.",
@@ -83,7 +83,7 @@
     },
     "card3": {
         "titre": "Tuftissimo",
-        "sousTitre": "Site vitrine interactif pour artiste spécialisée en tufting.",
+        "sousTitre": "Site vitrine interactif pour une artiste spécialisée en tufting.",
         "description": {
             "intro": "Tuftissimo est une application vitrine responsive pensée pour une artiste freelance spécialisée dans le tufting. Développée avec React, Tailwind CSS et TypeScript, elle valorise ses créations textiles tout en facilitant le contact client.",
             "fonctionnalitesTitre": "Fonctionnalités principales :",
@@ -142,7 +142,7 @@
                 "f1": "Ajout de fonctionnalités sur l’interface d’Okta en temps réel.",
                 "f2": "Export CSV des utilisateurs, groupes, et paramètres personnalisés.",
                 "f3": "Requêtes REST API Okta automatisées et sécurisées.",
-                "f4": "Développement full-stack avec logique métier côté extension et backend Node."
+                "f4": "Développement full-stack avec logique métier côté extension et BackEnd Node."
             },
             "missionsTitre": "Mes missions quotidiennes :",
             "missions": {
@@ -150,7 +150,7 @@
                 "m2": "Correction de bugs et gestion des tickets techniques.",
                 "m3": "Écriture de tests unitaires et scénarios de tests automatisés.",
                 "m4": "Utilisation avancée de Git pour le versionnement et les revues de code.",
-                "m5": "Communication constante avec les équipes produit (beaucoup de Huddles)."
+                "m5": "Communication constante avec les équipes produit."
             },
             "conclusion": "Cette expérience m’a permis de maîtriser le cycle complet du développement logiciel, avec une forte exposition aux API REST, au travail collaboratif et à l’automatisation de tâches répétitives. 💼"
         },

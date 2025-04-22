@@ -57,6 +57,7 @@ export const BackgroundBeams = React.memo(
       "M-44 -573C-44 -573 24 -168 488 -41C952 86 1020 491 1020 491",
       "M-37 -581C-37 -581 31 -176 495 -49C959 78 1027 483 1027 483",
     ];
+    const isMobile = window.innerWidth <= 768;
     return (
       <div
         className={cn(
@@ -79,7 +80,7 @@ export const BackgroundBeams = React.memo(
             strokeWidth="0.5"
           ></path>
 
-          {paths.map((path, index) => (
+          {!isMobile && paths.map((path, index) => (
             <motion.path
               key={`path-` + index}
               d={path}

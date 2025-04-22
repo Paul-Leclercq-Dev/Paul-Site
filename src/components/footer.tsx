@@ -100,7 +100,7 @@ export function Footer() {
                             </span>
                         </button>
                     </a>
-                    <a className='cursor-pointer' target='blank' href='mailto:exemple@email.com'>
+                    <a className='cursor-pointer' target='blank' href='paul.lercq@gmail.com'>
                         <button
                             type="button"
                             data-twe-ripple-init

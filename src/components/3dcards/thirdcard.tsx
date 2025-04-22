@@ -19,17 +19,17 @@ export function ThirdCard() {
 
     return (
         <CardContainer className="w-[350px] md:w-[400px]">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card border-black/[0.1] h-auto rounded-xl p-6 border">
                 <CardItem
                     translateZ="50"
-                    className="text-xl font-bold text-[#440949] dark:text-white"
+                    className="text-xl font-bold text-[#440949]"
                 >
                     {t('card3.titre')}
                 </CardItem>
                 <CardItem
                     as="p"
                     translateZ="60"
-                    className="text-[#730363] text-sm max-w-sm mt-2 dark:text-neutral-300"
+                    className="text-[#730363] text-sm max-w-sm mt-2"
                 >
                     {t('card3.sousTitre')}
                 </CardItem>
@@ -52,9 +52,9 @@ export function ThirdCard() {
                                 {t("card3.bouton.enSavoirPlus")}
                             </CardItem>
                         </AccordionHeader>
-                        <AccordionBody className="text-sm text-gray-700 dark:text-neutral-300 leading-relaxed">
+                        <AccordionBody className="text-sm text-gray-700 leading-relaxed">
                             <p>
-                                <strong>{t('card3.description.intro')}</strong>
+                                {t('card3.description.intro')}
                             </p>
 
                             <p className="mt-2">
