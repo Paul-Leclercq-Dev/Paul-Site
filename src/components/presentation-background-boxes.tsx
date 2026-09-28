@@ -29,7 +29,7 @@ export function PresentationBackgroundBoxes() {
                 </div>
                 <a className='z-50' href="mailto:paul.lercq@gmail.com">
                     <button
-                        className="animate-bounce cursor-pointer px-8 py-4 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[4px_4px_0px_0px_#B26FCD] transition duration-200 min-w-28">
+                        className="motion-safe:animate-bounce cursor-pointer px-8 py-4 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[4px_4px_0px_0px_#B26FCD] transition duration-200 min-w-28">
                         <span className="">{t("nav.mecontacter")}</span>
                     </button>
                 </a>

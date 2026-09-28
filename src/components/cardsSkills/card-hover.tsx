@@ -25,7 +25,7 @@ export const HoverEffect = ({
     }[];
     className?: string;
 }) => {
-    let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+    const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     return (
         <>
@@ -64,7 +64,7 @@ export const HoverEffect = ({
                         </AnimatePresence>
                         <Card className="bg-card-blue">
                             <CardTitle>{item.title}</CardTitle>
-                            <img src={item.image} alt={item.title} className="w-full h-32 object-contain rounded-t-lg" />
+                            <img src={item.image} alt={item.title} width="200" height="128" loading="lazy" decoding="async" className="w-full h-32 object-contain rounded-t-lg" />
                         </Card>
                     </a>
                 ))}
@@ -103,7 +103,7 @@ export const HoverEffect = ({
                         </AnimatePresence>
                         <Card className="bg-card-blue">
                             <CardTitle>{item.title}</CardTitle>
-                            <img src={item.image} alt={item.title} className="w-full h-32 object-contain rounded-t-lg" />
+                            <img src={item.image} alt={item.title} width="200" height="128" loading="lazy" decoding="async" className="w-full h-32 object-contain rounded-t-lg" />
                         </Card>
                     </a>
                 ))}
@@ -142,7 +142,7 @@ export const HoverEffect = ({
                         </AnimatePresence>
                         <Card className="bg-card-blue">
                             <CardTitle>{item.title}</CardTitle>
-                            <img src={item.image} alt={item.title} className="w-full h-32 object-contain rounded-t-lg" />
+                            <img src={item.image} alt={item.title} width="200" height="128" loading="lazy" decoding="async" className="w-full h-32 object-contain rounded-t-lg" />
                         </Card>
                     </a>
                 ))}

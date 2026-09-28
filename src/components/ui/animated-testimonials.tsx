@@ -1,6 +1,7 @@
 import { IconArrowLeft, IconArrowRight } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "motion/react";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { ColourfulText } from "./colourful-text";
 
 type Testimonial = {
@@ -18,6 +19,7 @@ export const AnimatedTestimonials = ({
     autoplay?: boolean;
 }) => {
     const [active, setActive] = useState(0);
+    const { t } = useTranslation();
 
     const handleNext = () => {
         setActive((prev) => (prev + 1) % testimonials.length);
@@ -43,21 +45,7 @@ export const AnimatedTestimonials = ({
     };
 
     function wordsInYourLanguage(): string {
-        const mots = "Mes Services"
-        const palabras = "Mis Servicios"
-        const words = "My Services"
-
-        const language = localStorage.getItem('language')
-        if (language === "fr") {
-            return mots
-        }
-        else if (language === "esp") {
-            return palabras
-        }
-        else if (language === "en") {
-            return words
-        }
-        return mots
+        return t("services.title");
     }
 
     return (
@@ -107,6 +95,8 @@ export const AnimatedTestimonials = ({
                                             alt={testimonial.name}
                                             width={500}
                                             height={500}
+                                            loading="lazy"
+                                            decoding="async"
                                             draggable={false}
                                             className="h-full w-full rounded-3xl object-cover object-center"
                                         />

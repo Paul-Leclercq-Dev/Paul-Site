@@ -10,7 +10,8 @@
     "accueil": {
         "jesuis": "Je suis",
         "paulleclercq": "Paul Leclercq",
-        "developpeur": "Développeur "
+        "developpeur": "Développeur ",
+        "words": ["Full Stack", "Créatif", "Passionné"]
     },
     "presentation": {
         "quisuisje": "Qui suis-je ?",
@@ -24,6 +25,27 @@
         "theme": "Changer le thème:",
         "langue": "Langues:",
         "contact": " Me Contacter"
+    },
+    "social": {
+        "linkedin": "Voir mon profil LinkedIn (nouvel onglet)",
+        "gitlab": "Voir mon profil GitLab (nouvel onglet)",
+        "mail": "M'envoyer un e-mail"
+    },
+    "a11y": {
+        "settings": "Ouvrir les paramètres (thème et langue)"
+    },
+    "services": {
+        "title": "Mes Services",
+        "items": [
+            { "name": "Développement Web Full-Stack", "quote": "Création de sites et applications web performants avec React, NestJS, et bases de données optimisées." },
+            { "name": "Développement d'Applications Web & Mobile", "quote": "Applications interactives et responsives, adaptées aux mobiles avec React et PWA." },
+            { "name": "API & Backend", "quote": "Conception d'API REST et GraphQL sécurisées et performantes avec NestJS, Prisma et Node.js." },
+            { "name": "Architecture & DevOps", "quote": "Mise en place d’infrastructures cloud (AWS, Scaleway), CI/CD et conteneurisation avec Docker." },
+            { "name": "Intégration UI/UX", "quote": "Développement d’interfaces modernes avec TailwindCSS, animations et optimisations UX." },
+            { "name": "Sécurité & Performance", "quote": "Protection des applications (authentification, sécurité des données) et optimisation des performances." },
+            { "name": "Base de Données & Stockage", "quote": "Modélisation, gestion et optimisation de bases SQL (MySQL, PostgreSQL) et NoSQL (MongoDB, Redis)." },
+            { "name": "Automatisation & Tests", "quote": "Automatisation des workflows, tests unitaires et end-to-end avec Jest, Cypress et BullMQ." }
+        ]
     },
     "projets": "Mes Projets",
     "card1": {

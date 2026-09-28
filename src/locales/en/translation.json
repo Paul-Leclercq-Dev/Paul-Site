@@ -10,7 +10,8 @@
     "accueil": {
       "jesuis": "I am",
       "paulleclercq": "Paul Leclercq",
-      "developpeur": "Developer"
+      "developpeur": "Developer",
+      "words": [" Full Stack", " Creative", " Passionate"]
     },
     "presentation": {
       "quisuisje": "Who am I?",
@@ -24,6 +25,27 @@
       "theme": "Change theme:",
       "langue": "Languages:",
       "contact": " Contact me"
+    },
+    "social": {
+      "linkedin": "View my LinkedIn profile (new tab)",
+      "gitlab": "View my GitLab profile (new tab)",
+      "mail": "Send me an email"
+    },
+    "a11y": {
+      "settings": "Open settings (theme and language)"
+    },
+    "services": {
+      "title": "My Services",
+      "items": [
+        { "name": "Full-Stack Web Development", "quote": "Creation of high-performance websites and web apps using React, NestJS, and optimized databases." },
+        { "name": "Web & Mobile App Development", "quote": "Interactive, mobile-friendly apps with React and PWA technologies." },
+        { "name": "API & Backend", "quote": "Design of secure and high-performance REST and GraphQL APIs with NestJS, Prisma, and Node.js." },
+        { "name": "Architecture & DevOps", "quote": "Cloud infrastructure setup (AWS, Scaleway), CI/CD, and Docker containerization." },
+        { "name": "UI/UX Integration", "quote": "Modern UI development with TailwindCSS, animations, and UX optimizations." },
+        { "name": "Security & Performance", "quote": "Application protection (authentication, data security) and performance optimization." },
+        { "name": "Database & Storage", "quote": "Modeling, managing, and optimizing SQL (MySQL, PostgreSQL) and NoSQL (MongoDB, Redis) databases." },
+        { "name": "Automation & Testing", "quote": "Workflow automation, unit and end-to-end testing with Jest, Cypress, and BullMQ." }
+      ]
     },
     "projets": "My Projects",
     "card1": {

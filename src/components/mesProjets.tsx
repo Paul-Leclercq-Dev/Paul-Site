@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
 import { useTranslation } from "react-i18next";
@@ -14,6 +13,16 @@ interface test {
 export function MesProjets(props: test) {
     
     const { t } = useTranslation();
+
+    const [motionOk, setMotionOk] = React.useState(false);
+
+    React.useEffect(() => {
+        const mq = window.matchMedia("(prefers-reduced-motion: no-preference)");
+        const update = () => setMotionOk(mq.matches);
+        update();
+        mq.addEventListener("change", update);
+        return () => mq.removeEventListener("change", update);
+    }, []);
 
     const { children, scndchildren, thrdchildren, fourthchildren, fifthchildren } = props
 
@@ -32,14 +41,16 @@ export function MesProjets(props: test) {
                         <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
                         {/* Core component */}
-                        <SparklesCore
-                            background="transparent"
-                            minSize={0.4}
-                            maxSize={1}
-                            particleDensity={1200}
-                            className="w-full h-full"
-                            particleColor="#FFFFFF"
-                        />
+                        {motionOk && (
+                            <SparklesCore
+                                background="transparent"
+                                minSize={0.4}
+                                maxSize={1}
+                                particleDensity={100}
+                                className="w-full h-full"
+                                particleColor="#FFFFFF"
+                            />
+                        )}
 
                         {/* Radial Gradient to prevent sharp edges */}
                         <div className="absolute inset-0 w-full h-full bg-bg-blue [mask-image:radial-gradient(350px_200px_at_top,transparent_20%,white)]"></div>
@@ -55,7 +66,7 @@ export function MesProjets(props: test) {
                 </div>
                 <a href="mailto:paul.lercq@gmail.com">
                     <button
-                        className=" flex items-center animate-bounce cursor-pointer px-8 py-4 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[4px_4px_0px_0px_#B26FCD] transition duration-200 min-w-28 z-50 m-auto">
+                        className=" flex items-center motion-safe:animate-bounce cursor-pointer px-8 py-4 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[4px_4px_0px_0px_#B26FCD] transition duration-200 min-w-28 z-50 m-auto">
                        {t("nav.mecontacter")}
                     </button>
                 </a>

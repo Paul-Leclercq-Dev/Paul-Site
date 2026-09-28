@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import React, { useRef, useEffect } from "react";
 
 export function useRefAccordion(setOpen: React.Dispatch<React.SetStateAction<boolean>>) {
     const accordionRef = useRef<HTMLDivElement>(null); // Création d'une référence
@@ -20,10 +20,10 @@ export function useRefAccordion(setOpen: React.Dispatch<React.SetStateAction<boo
     return accordionRef; // Retourne la référence pour qu'elle soit utilisée ailleurs
 }
 
-export const smoothScroll = (e : any) => {
+export const smoothScroll = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const targetId = e.currentTarget.getAttribute('data-scrollto')?.slice(1)
-    const elementToGo = document.getElementById(targetId)
+    const elementToGo = targetId ? document.getElementById(targetId) : null
 
     if (elementToGo) {
         elementToGo.scrollIntoView({

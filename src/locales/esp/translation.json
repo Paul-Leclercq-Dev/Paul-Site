@@ -25,6 +25,14 @@
       "langue": "Idiomas:",
       "contact": "Contáctame"
     },
+    "social": {
+      "linkedin": "Ver mi perfil de LinkedIn (nueva pestaña)",
+      "gitlab": "Ver mi perfil de GitLab (nueva pestaña)",
+      "mail": "Enviarme un correo"
+    },
+    "a11y": {
+      "settings": "Abrir ajustes (tema e idioma)"
+    },
     "projets": "Mis Proyectos",
     "card1": {
       "titre": "La Casa Altea",

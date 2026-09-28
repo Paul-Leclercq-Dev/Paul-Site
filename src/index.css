@@ -1,14 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Aldrich&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@font-face {
+  font-family: "Aldrich";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/fonts/aldrich-v22-latin-regular.woff2") format("woff2");
+}
 
 @theme {
 
   --color-customPurple: #9F4CC1;
-
-  --font-display: "Oswald", "sans-serif";
 
   --my-font: "Aldrich", sans-serif;
 

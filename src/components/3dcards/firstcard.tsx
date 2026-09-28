@@ -27,8 +27,10 @@ export function FirstCard() {
         <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-4" href="https://la-casa-altea.com/">
           <img
             src={lacasa1}
-            height="1000"
-            width="1000"
+            width="400"
+            height="240"
+            loading="lazy"
+            decoding="async"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="thumbnail"
           />
@@ -68,6 +70,7 @@ export function FirstCard() {
               <a
                 href="https://la-casa-altea.com/"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 px-5 py-3 rounded-xl bg-[#0D172B] text-white text-xs font-bold block cursor-pointer w-36 text-center m-auto"
               >
                 {t("card1.bouton.visiter")}

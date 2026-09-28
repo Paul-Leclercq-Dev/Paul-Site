@@ -6,16 +6,6 @@ import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { useTranslation } from 'react-i18next';
 
-import loading from './assets/images/loading.webp';
-
-function SplashScreen() {
-  return (
-    <div className="flex items-center justify-center h-screen bg-[white]">
-      <img src={loading} alt="Logo" className="w-1/2 md:w-1/4 animate-pulse rounded-3xl" />
-    </div>
-  );
-}
-
 function ChooseLanguage({ changeLanguage }: { changeLanguage: (language: string) => void }) {
   return (
     <div className="min-h-screen flex justify-center items-center bg-gradient-to-r from-[#0D172B] via-white to-[#B26FCD]">
@@ -38,7 +28,7 @@ function ChooseLanguage({ changeLanguage }: { changeLanguage: (language: string)
           🇺🇸 English
         </button>
         <button
-          onClick={() => changeLanguage('esp')}
+          onClick={() => changeLanguage('es')}
           className="cursor-pointer px-12 py-8 rounded-md border border-[#B26FCD] bg-white text-[#0D172B] text-sm hover:shadow-[8px_8px_0px_0px_#B26FCD] transition duration-200 min-w-28"
         >
           🇪🇸 Español
@@ -51,7 +41,6 @@ function ChooseLanguage({ changeLanguage }: { changeLanguage: (language: string)
 function App() {
   const { i18n } = useTranslation();
   const [languageChoose, setLanguageChoose] = useState(!!localStorage.getItem('language'));
-  const [loading, setLoading] = useState(true);
 
   // Charger la langue dès le départ
   useEffect(() => {
@@ -59,12 +48,6 @@ function App() {
     if (language) {
       i18n.changeLanguage(language).then(() => setLanguageChoose(true));
     }
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1000); // Réduction du temps de chargement
-
-    return () => clearTimeout(timer);
   }, []);
 
   const changeLanguage = (language: string) => {
@@ -73,10 +56,6 @@ function App() {
       setLanguageChoose(true);
     });
   };
-
-  if (loading) {
-    return <SplashScreen />;
-  }
 
   return (
     <>

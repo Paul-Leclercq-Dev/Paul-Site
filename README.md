@@ -1,54 +1,64 @@
-# React + TypeScript + Vite
+# paul-leclercq.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine de Paul Leclercq, développeur freelance à Valencia (Espagne). Application web trilingue (FR / ES / EN).
 
-Currently, two official plugins are available:
+## Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** + **TypeScript** (strict)
+- **Vite 6** (build & dev server)
+- **Tailwind CSS 4**
+- **motion** (animations)
+- **i18next** / react-i18next (internationalisation FR / ES / EN)
+- **Docker** (build Node → Nginx alpine)
 
-## Expanding the ESLint configuration
+## Prérequis
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Node.js 22+
+- npm
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## Développement
+
+```bash
+npm install       # installe les dépendances
+npm run dev       # démarre le serveur de développement (Vite, HMR)
+npm run lint      # analyse ESLint
+npm run build     # build de production (tsc + vite) dans dist/
+npm run preview   # prévisualise le build de production
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Déploiement Docker
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+L'image se construit en deux étapes (build Node puis service via Nginx alpine).
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```bash
+docker compose up --build   # build l'image et démarre le conteneur
+```
+
+Le site est alors servi sur http://localhost:8080.
+
+## Structure des dossiers
+
+```
+├── docker-compose.yml      # orchestration du conteneur
+├── dockerfile              # build multi-étapes (Node → Nginx)
+├── nginx.conf              # config Nginx (gzip, cache, en-têtes sécurité)
+├── index.html              # point d'entrée HTML
+├── docs/
+│   └── AUDIT.md            # audit de référence du projet
+├── public/                 # assets statiques (favicons, polices)
+│   └── fonts/              # police Aldrich auto-hébergée
+└── src/
+    ├── main.tsx            # point d'entrée React
+    ├── App.tsx             # routeur et sélection de langue
+    ├── i18n.js             # configuration i18next
+    ├── index.css           # styles globaux Tailwind + thème
+    ├── assets/             # images importées par le bundle
+    ├── components/         # composants UI (navbar, cartes, sections…)
+    │   ├── 3dcards/        # cartes projets 3D
+    │   ├── cardsSkills/    # cartes compétences
+    │   ├── hooks/          # hooks personnalisés (useDarkMode…)
+    │   └── ui/             # primitives d'interface animées
+    ├── lib/                # utilitaires (helpers, cn…)
+    ├── locales/            # traductions fr / en / es
+    └── pages/              # pages (homePage…)
 ```

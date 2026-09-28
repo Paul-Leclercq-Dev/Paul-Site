@@ -1,5 +1,6 @@
 
 import { JSX } from "react";
+import { useTranslation } from "react-i18next";
 import { FloatingNav } from "./ui/floating-navbar";
 import { IconCode, IconDeviceDesktopSearch, IconHome, IconTools, IconUser } from "@tabler/icons-react";
 
@@ -11,125 +12,39 @@ interface navItem {
 
 export function NavBar() {
 
-  function navItems(): navItem[] {
-    const navItemsFR = [
-      {
-        name: "Accueil",
-        link: "/",
-        icon: <IconHome className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "Qui suis-je",
-        link: "/presentation",
-        icon: <IconUser className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "Services",
-        link: "/services",
-        icon: (
-          <IconTools className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Projets",
-        link: "/projets",
-        icon: (
-          <IconDeviceDesktopSearch className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Technos",
-        link: "/tecnos",
-        icon: (
-          <IconCode className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-    ];
-    const navItemsEsp = [
-      {
-        name: "Inicio",
-        link: "/",
-        icon: <IconHome className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "¿Quién soy?",
-        link: "/presentation",
-        icon: <IconUser className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "Servicios",
-        link: "/services",
-        icon: (
-          <IconTools className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Proyectos",
-        link: "/projets",
-        icon: (
-          <IconDeviceDesktopSearch className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Tecnologías",
-        link: "/tecnos",
-        icon: (
-          <IconCode className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-    ];
+  const { t } = useTranslation();
 
-    const navItemsEn = [
-      {
-        name: "Home",
-        link: "/",
-        icon: <IconHome className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "Who am I",
-        link: "/presentation",
-        icon: <IconUser className="h-4 w-4 text-neutral-500 " />,
-      },
-      {
-        name: "Services",
-        link: "/services",
-        icon: (
-          <IconTools className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Projects",
-        link: "/projets",
-        icon: (
-          <IconDeviceDesktopSearch className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-      {
-        name: "Technologies",
-        link: "/tecnos",
-        icon: (
-          <IconCode className="h-4 w-4 text-neutral-500 " />
-        ),
-      },
-    ];
-
-    const languages = localStorage.getItem("language")
-    if (languages === "fr") {
-      return navItemsFR
-    }
-    else if (languages === "esp") {
-      return navItemsEsp
-    }
-    else if (languages === "en") {
-      return navItemsEn
-    }
-    return navItemsFR
-  }
-
+  const navItems: navItem[] = [
+    {
+      name: t("nav.accueil"),
+      link: "/",
+      icon: <IconHome className="h-4 w-4 text-neutral-500 " />,
+    },
+    {
+      name: t("nav.qui_suis_je"),
+      link: "/presentation",
+      icon: <IconUser className="h-4 w-4 text-neutral-500 " />,
+    },
+    {
+      name: t("nav.services"),
+      link: "/services",
+      icon: <IconTools className="h-4 w-4 text-neutral-500 " />,
+    },
+    {
+      name: t("nav.projets"),
+      link: "/projets",
+      icon: <IconDeviceDesktopSearch className="h-4 w-4 text-neutral-500 " />,
+    },
+    {
+      name: t("nav.tecnos"),
+      link: "/tecnos",
+      icon: <IconCode className="h-4 w-4 text-neutral-500 " />,
+    },
+  ];
 
   return (
     <div className="relative  w-full">
-      <FloatingNav navItems={navItems()} />
+      <FloatingNav navItems={navItems} />
     </div>
   );
 }

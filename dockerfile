@@ -1,15 +1,15 @@
 # Étape 1 : Construction de l'application React
-FROM node:18 AS build
+FROM node:22-alpine AS build
 WORKDIR /app
 
-# Copier les fichiers nécessaires
+# Copier les fichiers de dépendances et installer avec un lockfile figé
 COPY package.json package-lock.json ./
-RUN npm install
+RUN npm ci
 
 COPY . .
 
 # Construire l'application React
-RUN npm run build && ls -l dist
+RUN npm run build
 
 # Étape 2 : Utilisation de Nginx pour servir l'application
 FROM nginx:alpine

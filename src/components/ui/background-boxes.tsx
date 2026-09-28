@@ -4,9 +4,24 @@ import { motion } from "motion/react";
 import { cn } from "../../lib/utils";
 
 export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
-  let colors = [
+  const [enabled, setEnabled] = React.useState(false);
+
+  React.useEffect(() => {
+    const desktop = window.matchMedia("(min-width: 768px)");
+    const noReduce = window.matchMedia("(prefers-reduced-motion: no-preference)");
+    const update = () => setEnabled(desktop.matches && noReduce.matches);
+    update();
+    desktop.addEventListener("change", update);
+    noReduce.addEventListener("change", update);
+    return () => {
+      desktop.removeEventListener("change", update);
+      noReduce.removeEventListener("change", update);
+    };
+  }, []);
+
+  const rows = new Array(30).fill(1);
+  const cols = new Array(20).fill(1);
+  const colors = [
     "#93c5fd",
     "#f9a8d4",
     "#86efac",
@@ -20,6 +35,10 @@ export const BoxesCore = ({ className, ...rest }: { className?: string }) => {
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
+
+  if (!enabled) {
+    return null;
+  }
 
   return (
     <div

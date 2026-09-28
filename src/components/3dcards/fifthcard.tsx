@@ -39,8 +39,10 @@ export function FifthCard() {
                     rotateZ={-10}
                     className="w-full mt-4"
                 >
-                    <img src={shaple_rockstar} height="1000"
-                        width="1000"
+                    <img src={shaple_rockstar} width="400"
+                        height="240"
+                        loading="lazy"
+                        decoding="async"
                         className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
                         alt="thumbnail"
                     />
@@ -84,6 +86,7 @@ export function FifthCard() {
                             <a
                                 href="https://chromewebstore.google.com/detail/rockstar/chjepkekmhealpjipcggnfepkkfeimbd"
                                 target="_blank"
+                                rel="noopener noreferrer"
                                 className="mt-6 px-5 py-3 rounded-xl bg-[#0D172B] text-white text-xs font-bold block cursor-pointer w-36 text-center"
                             >
                                 {t('card5.bouton.visiter')}
