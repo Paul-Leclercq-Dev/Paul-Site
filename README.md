@@ -26,12 +26,28 @@ npm run build     # build de production (tsc + vite) dans dist/
 npm run preview   # prévisualise le build de production
 ```
 
-## Déploiement Docker
+## Déploiement (Cloudflare Pages)
 
-L'image se construit en deux étapes (build Node puis service via Nginx alpine).
+Connecter le dépôt GitHub dans le dashboard Cloudflare Pages, puis utiliser les réglages suivants :
+
+- **Framework preset** : Vite (ou None)
+- **Build command** : `npm run build`
+- **Build output directory** : `dist`
+- **Root directory** : laisser vide
+- **Version de Node.js** : 22, lue depuis `.node-version`
+
+La branche de production est `main`. Chaque pull request génère une URL de preview.
+
+Ajouter `paul-leclercq.com` et `www.paul-leclercq.com` comme domaines personnalisés, puis créer une Redirect Rule Cloudflare pour rediriger `www` vers le domaine apex `paul-leclercq.com`.
+
+Les en-têtes HTTP et règles de cache de Pages sont définis dans `public/_headers` (copié dans `dist/`). `nginx.conf` est utilisé uniquement pour le déploiement Docker.
+
+### Plan B : Docker
+
+Le Dockerfile et `docker-compose.yml` sont conservés pour un hébergement alternatif. La CI publie l'image sur GHCR lors du push d'un tag `v*` ; le workflow Docker peut aussi être lancé manuellement (`workflow_dispatch`).
 
 ```bash
-docker compose up --build   # build l'image et démarre le conteneur
+docker compose up --build
 ```
 
 Le site est alors servi sur http://localhost:8080.
